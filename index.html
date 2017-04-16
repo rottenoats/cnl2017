@@ -13,6 +13,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<style>
+			#map {
+				width: 100%;
+				height: 400px;
+				background-color: grey;
+			}
+		</style>
 	</head>
 	<body class="landing">
 
@@ -41,7 +48,7 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Convention National Leo</h2>
+							<h2><b>Convention National Leo</b> Strasbourg</h2>
 							<p>Les annees folles<br />
 							Octobre 20, 21, 22 2017
 							<ul class="actions">
@@ -70,7 +77,7 @@
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/strasbourg.jpg" alt="" /></div><div class="content">
 								<h2>Strasbourg</h2>
 								<p>Nous tenons à vous recevoir au cœur de note ville, pour pouvoir partager avec vous le dynamisme de Strasbourg,
 									de par sa position européenne exceptionnelle ; Mais également sa culture et sa gastronomie,
@@ -80,13 +87,13 @@
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/folles01.jpg" alt="" /></div><div class="content">
 								<h2>Années Folles</h2>
 								<p>C’est une convention immanquable qui vous attend sur le thème des Années Folles ! Nous allons vous surprendre, croyez-nous ! </p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/kiss02.png" alt="" /></div><div class="content">
 								<h2>Gala</h2>
 								<p>Notre rassemblement sera une fois de plus l’occasion d’échanger autour de nos actions, mais aussi de vivre des moments de découverte et de partage, notamment en compagnie de nos amis Lions lors de la traditionnelle soirée de Gala. </p>
 							</div>
@@ -97,37 +104,93 @@
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Equipe CNL</h2>
+								<!-- <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
+								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p> -->
 							</header>
 							<ul class="features">
 								<li class="icon fa-paper-plane-o">
-									<h3>Arcu accumsan</h3>
+									<h3>Eddie Schultz</h3>
+									<img style="border-radius: 50%" width="300" src="images/eddie.jpg"/>
+									<p>President</p>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
+									<h3>Melanie Holweg</h3>
+									<p>Vice-President</p>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
+									<h3>Kevin Dittmann</h3>
+									<p>Tresorier</p>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
+									<h3>Corentin Boisseliert</h3>
+									<p>Secretaire</p>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
 							</ul>
 						</div>
+					</section>
+					<section id="four">
+						<div id="map"></div>
+						<script>
+							function initMap() {
+								var uluru = {lat: -25.363, lng: 131.044};
+								var map = new google.maps.Map(document.getElementById('map'), {
+									zoom: 4,
+									center: uluru
+								});
+								// Create an array of alphabetical characters used to label the markers.
+								var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+								// Add some markers to the map.
+								// Note: The code uses the JavaScript Array.prototype.map() method to
+								// create an array of markers based on a given "locations" array.
+								// The map() method here has nothing to do with the Google Maps API.
+								var markers = locations.map(function(location, i) {
+									return new google.maps.Marker({
+										position: location,
+										label: labels[i % labels.length]
+									});
+								});
+
+								// Add a marker clusterer to manage the markers.
+								var markerCluster = new MarkerClusterer(map, markers,
+										{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+							}
+							var locations = [
+								{lat: -31.563910, lng: 147.154312},
+								{lat: -33.718234, lng: 150.363181},
+								{lat: -33.727111, lng: 150.371124},
+								{lat: -33.848588, lng: 151.209834},
+								{lat: -33.851702, lng: 151.216968},
+								{lat: -34.671264, lng: 150.863657},
+								{lat: -35.304724, lng: 148.662905},
+								{lat: -36.817685, lng: 175.699196},
+								{lat: -36.828611, lng: 175.790222},
+								{lat: -37.750000, lng: 145.116667},
+								{lat: -37.759859, lng: 145.128708},
+								{lat: -37.765015, lng: 145.133858},
+								{lat: -37.770104, lng: 145.143299},
+								{lat: -37.773700, lng: 145.145187},
+								{lat: -37.774785, lng: 145.137978},
+								{lat: -37.819616, lng: 144.968119},
+								{lat: -38.330766, lng: 144.695692},
+								{lat: -39.927193, lng: 175.053218},
+								{lat: -41.330162, lng: 174.865694},
+								{lat: -42.734358, lng: 147.439506},
+								{lat: -42.734358, lng: 147.501315},
+								{lat: -42.735258, lng: 147.438000},
+								{lat: -43.999792, lng: 170.463352}
+							]
+						</script>
+						<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+						</script>
+						<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBORVoO2zMsLeRIKl-ld66b0KSWgaM7m_w&callback=initMap">
+						</script>
 					</section>
 
 				<!-- CTA -->
