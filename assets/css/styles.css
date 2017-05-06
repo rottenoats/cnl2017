@@ -1,0 +1,11 @@
+#cnlVideo {
+    width: 100%;
+    height: auto;
+    min-height: 315px;
+    min-width: 560px;
+}
+
+.organizers {
+    border-radius: 50%;
+    width: 300px;
+}

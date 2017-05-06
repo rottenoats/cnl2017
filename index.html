@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<style>
@@ -71,6 +73,7 @@
 								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
 								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
 							</ul>
+							<iframe id="cnlVideo" src="https://www.youtube.com/embed/TzGvBdo_LzA" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</section>
 
@@ -111,39 +114,42 @@
 							<ul class="features">
 								<li class="icon fa-paper-plane-o">
 									<h3>Eddie Schultz</h3>
-									<img style="border-radius: 50%" width="300" src="images/eddie.jpg"/>
-									<p>President</p>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<img class="organizers" src="images/eddie.jpg"/>
+									<p>Parrain</p>
+									<p>S’occupe du bon fonctionnement de l’organisation et conseils ses associés dans les affaires.</p>
 								</li>
 								<li class="icon fa-laptop">
 									<h3>Melanie Holweg</h3>
-									<p>Vice-President</p>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<img class="organizers" src="images/melanie.jpg"/>
+									<p>Reine des Soirées Folles</p>
+									<p>Présente à toutes les soirées organisées, elle met l’ambiance.</p>
 								</li>
 								<li class="icon fa-code">
 									<h3>Kevin Dittmann</h3>
-									<p>Tresorier</p>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<img class="organizers" src="images/kevind.jpg"/>
+									<p>Responsable du blanchimen</p>
+									<p>Transforme l’agent sale de l’organisation en biens caritatifs.</p>
 								</li>
 								<li class="icon fa-headphones">
 									<h3>Corentin Boisseliert</h3>
-									<p>Secretaire</p>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+									<img class="organizers" src="images/eddie.jpg"/>
+									<p>Garde du corps</p>
+									<p>Bras droit du parrain, il s’occupe de sa protection.</p>
 								</li>
 							</ul>
 						</div>
 					</section>
 					<section id="four">
-						<div id="map"></div>
+						<div id="map" height="300"></div>
 						<script>
 							function initMap() {
-								var uluru = {lat: -25.363, lng: 131.044};
+								var uluru = {lat: 48.591379, lng: 7.753240};
 								var map = new google.maps.Map(document.getElementById('map'), {
-									zoom: 4,
+									zoom: 14,
 									center: uluru
 								});
 								// Create an array of alphabetical characters used to label the markers.
-								var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+								var labels = ['Soirée Gala au Hilton', 'Cap Europe', 'Gare de Strasbourg', 'Cathedrale Notre Dame'];
 
 								// Add some markers to the map.
 								// Note: The code uses the JavaScript Array.prototype.map() method to
@@ -161,29 +167,10 @@
 										{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 							}
 							var locations = [
-								{lat: -31.563910, lng: 147.154312},
-								{lat: -33.718234, lng: 150.363181},
-								{lat: -33.727111, lng: 150.371124},
-								{lat: -33.848588, lng: 151.209834},
-								{lat: -33.851702, lng: 151.216968},
-								{lat: -34.671264, lng: 150.863657},
-								{lat: -35.304724, lng: 148.662905},
-								{lat: -36.817685, lng: 175.699196},
-								{lat: -36.828611, lng: 175.790222},
-								{lat: -37.750000, lng: 145.116667},
-								{lat: -37.759859, lng: 145.128708},
-								{lat: -37.765015, lng: 145.133858},
-								{lat: -37.770104, lng: 145.143299},
-								{lat: -37.773700, lng: 145.145187},
-								{lat: -37.774785, lng: 145.137978},
-								{lat: -37.819616, lng: 144.968119},
-								{lat: -38.330766, lng: 144.695692},
-								{lat: -39.927193, lng: 175.053218},
-								{lat: -41.330162, lng: 174.865694},
-								{lat: -42.734358, lng: 147.439506},
-								{lat: -42.734358, lng: 147.501315},
-								{lat: -42.735258, lng: 147.438000},
-								{lat: -43.999792, lng: 170.463352}
+								{lat: 48.597152, lng: 7.754952},
+								{lat: 48.591379, lng: 7.753240},
+								{lat: 48.585412, lng: 7.734299},
+								{lat: 48.582076, lng: 7.751081}
 							]
 						</script>
 						<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -192,20 +179,66 @@
 								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBORVoO2zMsLeRIKl-ld66b0KSWgaM7m_w&callback=initMap">
 						</script>
 					</section>
+				<section id="cta" class="wrapper style4">
+					<div class="inner">
+						<header>
+							<h2>Inscriptions</h2>
+							<p>Veuillez remplir les champs, vous allez recevoir par mails des informations cernant le paiement</p>
+						</header>
+						<!--<ul class="actions vertical">
+							<li><a href="#" class="button fit special">Activate</a></li>
+							<li><a href="#" class="button fit">Learn More</a></li>
+						</ul>-->
+					</div>
+				</section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions vertical">
-								<li><a href="#" class="button fit special">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
+				<section id="five" class="wrapper">
+
+					<form class="inner" method="post" action="https://script.google.com/macros/s/AKfycbxkV41wETxrKjjnWlOt_3NcMgeCXzNxST0qSxvTtMJuMqRKZUM/exec">
+						<div class="row uniform">
+							<div class="6u 12u$(xsmall)">
+								<input type="text" name="name" id="name" value="" placeholder="Name" />
+							</div>
+							<div class="6u$ 12u$(xsmall)">
+								<input type="email" name="email" id="email" value="" placeholder="Email" />
+							</div>
+							<div class="12u$">
+								<input type="text" name="club" id="club" value="" placeholder="Nom Du Club Leo/Lions" />
+							</div>
+							<div class="4u 12u$(small)">
+								<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+								<label for="demo-priority-low">Leo</label>
+							</div>
+							<div class="4u 12u$(small)">
+								<input type="radio" id="demo-priority-normal" name="demo-priority">
+								<label for="demo-priority-normal">Lions</label>
+							</div>
+							<div class="4u$ 12u$(small)">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">Invité</label>
+							</div>
+							<!--
+							<div class="6u 12u$(small)">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="6u$ 12u$(small)">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="12u$">
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+							</div> -->
+							<div class="12u$">
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</div>
 						</div>
-					</section>
+					</form>
+				</section>
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -231,6 +264,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.handler.js"></script>
 
 	</body>
 </html>
