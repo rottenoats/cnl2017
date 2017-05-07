@@ -1,0 +1,24 @@
+.organizers{
+	max-height: 300px;
+}
+
+.features li{
+	text-align: center;
+}
+
+.features .icon{
+	padding-right: 10px;
+}
+
+@media screen and (min-width: 964px) {
+   .slb{
+		height: 350px;
+	}
+
+	.slb .image{
+		
+	}
+	.slb .image img{
+		height: 350px;
+	}
+}

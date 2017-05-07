@@ -12,7 +12,7 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
-
+		<link rel="stylesheet" href="assets/css/alphacss.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<style>
@@ -79,7 +79,7 @@
 
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
+						<section class="spotlight slb">
 							<div class="image"><img src="images/strasbourg.jpg" alt="" /></div><div class="content">
 								<h2>Strasbourg</h2>
 								<p>Nous tenons à vous recevoir au cœur de note ville, pour pouvoir partager avec vous le dynamisme de Strasbourg,
@@ -89,13 +89,13 @@
 								</p>
 							</div>
 						</section>
-						<section class="spotlight">
+						<section class="spotlight slb">
 							<div class="image"><img src="images/folles01.jpg" alt="" /></div><div class="content">
 								<h2>Années Folles</h2>
 								<p>C’est une convention immanquable qui vous attend sur le thème des Années Folles ! Nous allons vous surprendre, croyez-nous ! </p>
 							</div>
 						</section>
-						<section class="spotlight">
+						<section class="spotlight slb">
 							<div class="image"><img src="images/kiss02.png" alt="" /></div><div class="content">
 								<h2>Gala</h2>
 								<p>Notre rassemblement sera une fois de plus l’occasion d’échanger autour de nos actions, mais aussi de vivre des moments de découverte et de partage, notamment en compagnie de nos amis Lions lors de la traditionnelle soirée de Gala. </p>
@@ -112,25 +112,25 @@
 								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p> -->
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane-o">
+								<li>
 									<h3>Eddie Schultz</h3>
 									<img class="organizers" src="images/eddie.jpg"/>
 									<p>Parrain</p>
 									<p>S’occupe du bon fonctionnement de l’organisation et conseils ses associés dans les affaires.</p>
 								</li>
-								<li class="icon fa-laptop">
+								<li>
 									<h3>Melanie Holweg</h3>
 									<img class="organizers" src="images/melanie.jpg"/>
 									<p>Reine des Soirées Folles</p>
 									<p>Présente à toutes les soirées organisées, elle met l’ambiance.</p>
 								</li>
-								<li class="icon fa-code">
+								<li>
 									<h3>Kevin Dittmann</h3>
 									<img class="organizers" src="images/kevind.jpg"/>
 									<p>Responsable du blanchimen</p>
 									<p>Transforme l’agent sale de l’organisation en biens caritatifs.</p>
 								</li>
-								<li class="icon fa-headphones">
+								<li>
 									<h3>Corentin Boisseliert</h3>
 									<img class="organizers" src="images/eddie.jpg"/>
 									<p>Garde du corps</p>
@@ -156,7 +156,10 @@
 								// create an array of markers based on a given "locations" array.
 								// The map() method here has nothing to do with the Google Maps API.
 								var markers = locations.map(function(location, i) {
+									console.log(location, i)
 									return new google.maps.Marker({
+
+
 										position: location,
 										label: labels[i % labels.length]
 									});
@@ -173,8 +176,9 @@
 								{lat: 48.582076, lng: 7.751081}
 							]
 						</script>
-						<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-						</script>
+						<!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+						</script> -->
+						<script src="assets/js/markercluster.js"></script>
 						<script async defer
 								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBORVoO2zMsLeRIKl-ld66b0KSWgaM7m_w&callback=initMap">
 						</script>
