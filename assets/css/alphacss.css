@@ -2,9 +2,17 @@
 	max-height: 300px;
 }
 
+.wrapper > .inner {
+    width: inherit;
+    margin: 0 auto;
+}
+
 .features li{
+
 	text-align: center;
-	height: 450px;
+	padding: 2em 0em 2em 0em;
+	width: 100%;
+	/*height: 450px;*/
 }
 
 .features .icon{
@@ -51,7 +59,7 @@
 	height: 300px;
 	border-radius: 50%;
 	background-size: 100%;
-	background-image: url(../../images/eddie.jpg);
+	/*background-image: url(../../images/eddie.jpg);*/
 }
 .side1,
 .side2,
@@ -184,7 +192,7 @@
     to {background-color: rgba(0,0,0,0.75); color: white; }
 }
 
-@media screen and (min-width: 964px) {
+@media screen and (min-width: 1000px) {
    .slb{
 		height: 350px;
 	}
@@ -194,6 +202,9 @@
 	}
 	.slb .image img{
 		height: 350px;
+	}
+	.features li{
+		width: 33%;
 	}
 }
 
