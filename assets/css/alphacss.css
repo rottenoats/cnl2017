@@ -4,10 +4,184 @@
 
 .features li{
 	text-align: center;
+	height: 450px;
 }
 
 .features .icon{
 	padding-right: 10px;
+}
+
+#menu a:hover{
+	color: rgba(0,0,0,0.5);
+}
+.button.special:hover {
+    color: rgba(0,0,0,0.5) !important;
+}
+.actions .special:hover{
+	color: rgba(0,0,0,0.5) !important;
+}
+
+.frontside1{
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-image: url(../../images/eddie.jpg);
+}
+.frontside2{
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-image: url(../../images/melanie.jpg);
+}
+.frontside3{
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-image: url(../../images/kevind.jpg);
+}
+.frontside4{
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-image: url(../../images/eddie.jpg);
+}
+.side1,
+.side2,
+.side3,
+.side4{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: transparent;
+	color: transparent;
+}
+.side1:hover, 
+.side2:hover, 
+.side3:hover,
+.side4:hover{
+	animation-delay: 0s;
+	animation-name: flipper;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.side1 p:first-child{
+	padding-top: 4.5em;
+	padding-bottom: 1em;
+}
+.side2 p:first-child{
+	padding-top: 6em;
+	padding-bottom: 1em;
+}
+.side3 p:first-child{
+	padding-top: 6em;
+	padding-bottom: 1em;
+}
+.side4 p:first-child{
+	padding-top: 6em;
+	padding-bottom: 1em;
+}
+.backs p{
+	margin: 0em 1em;
+}
+
+
+.i1 .style1:hover, 
+.i2 .style2:hover, 
+.i3 .style3:hover{
+	/*background-color: rgba(0,0,0,0.2);*/
+}
+.fa-diamond{
+	
+	animation-delay: 0s;
+	animation-name: ccdia;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+.fa-heart-o{
+	
+	animation-delay: 0s;
+	animation-name: cchea;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+
+.fa-code{
+	animation-delay: 0s;
+	animation-name: cccod;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes ccdia {
+    from {background-color: transparent;color: #00ffcc;}
+    50% {background-color: #00ffcc; color: white;}
+    to {background-color: transparent; color: #00ffcc;}
+}
+@-moz-keyframes ccdia {
+    from {background-color: transparent;color: #00ffcc;}
+    50% {background-color: #00ffcc; color: white;}
+    to {background-color: transparent; color: #00ffcc;}
+}
+@keyframes ccdia {
+    from {background-color: transparent;color: #00ffcc;}
+    50% {background-color: #00ffcc; color: white;}
+    to {background-color: transparent; color: #00ffcc;}
+}
+@-webkit-keyframes cchea {
+    from {background-color: transparent;color: #00f0ff;}
+    50% {background-color: #00f0ff; color: white;}
+    to {background-color: transparent; color: #00f0ff;}
+}
+@-moz-keyframes cchea {
+    from {background-color: transparent;color: #00f0ff;}
+    50% {background-color: #00f0ff; color: white;}
+    to {background-color: transparent; color: #00f0ff;}
+}
+@keyframes cchea {
+    from {background-color: transparent;color: #00f0ff;}
+    50% {background-color: #00f0ff; color: white;}
+    to {background-color: transparent; color: #00f0ff;}
+}
+@-webkit-keyframes cccod{
+    from {background-color: transparent;color: #76ddff;}
+    50% {background-color: #76ddff; color: white;}
+    to {background-color: transparent; color: #76ddff;}
+}
+@-moz-keyframes cccod{
+    from {background-color: transparent;color: #76ddff;}
+    50% {background-color: #76ddff; color: white;}
+    to {background-color: transparent; color: #76ddff;}
+}
+@keyframes cccod{
+    from {background-color: transparent;color: #76ddff;}
+    50% {background-color: #76ddff; color: white;}
+    to {background-color: transparent; color: #76ddff;}
+}
+
+@-webkit-keyframes flipper {
+    from {background-color: transparent; color: transparent; }
+    to {background-color: rgba(0,0,0,0.75); color: white;}
+}
+@-moz-keyframes flipper{
+    from {background-color: transparent; color: transparent; }
+    to {background-color: rgba(0,0,0,0.75); color: white; }
+}
+@keyframes flipper {
+    from {background-color: transparent; color: transparent; }
+    to {background-color: rgba(0,0,0,0.75); color: white; }
 }
 
 @media screen and (min-width: 964px) {
@@ -22,3 +196,4 @@
 		height: 350px;
 	}
 }
+
