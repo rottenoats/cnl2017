@@ -22,21 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inscription.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1925">
-              <caret line="77" column="11" selection-start-line="28" selection-start-column="3" selection-end-line="77" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elements.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elements.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7750">
-              <caret line="310" column="96" selection-start-line="310" selection-start-column="96" selection-end-line="310" selection-end-column="96" />
+            <state relative-caret-position="1100">
+              <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -72,13 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alphacss.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="alphacss.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/alphacss.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1650">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kiss02.PNG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/kiss02.PNG">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -418,12 +415,12 @@
       <workItem from="1492419517459" duration="4146000" />
       <workItem from="1493238974395" duration="147000" />
       <workItem from="1494101462203" duration="2217000" />
-      <workItem from="1497558712721" duration="239000" />
+      <workItem from="1497558712721" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17593000" />
+    <option name="totallyTimeSpent" value="17951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1439" y="0" width="2411" height="2110" extended-state="0" />
@@ -717,14 +714,6 @@
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/config.json" />
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inscription.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1925">
@@ -780,11 +769,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/kiss.PNG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3891">
@@ -797,6 +781,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1650">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/kiss.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/kiss02.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
           <folding />
         </state>
       </provider>
