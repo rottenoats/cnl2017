@@ -70,20 +70,24 @@
 	border-radius: 50%;
 	background-color: transparent;
 	color: transparent;
+	transition: all 2s ease-in-out;
+
 }
 .side1:hover, 
 .side2:hover, 
 .side3:hover,
 .side4:hover{
-	animation-delay: 0s;
+	background-color: rgba(0,0,0,0.75); 
+	color: white;
+	/*animation-delay: 0s;
 	animation-name: flipper;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }
 .side1 p:first-child{
-	padding-top: 4.5em;
+	padding-top: 4em;
 	padding-bottom: 1em;
 }
 .side2 p:first-child{
@@ -180,16 +184,19 @@
 }
 
 @-webkit-keyframes flipper {
-    from {background-color: transparent; color: transparent; }
-    to {background-color: rgba(0,0,0,0.75); color: white;}
+    0% {background-color: transparent; color: transparent; }
+    100% {background-color: rgba(0,0,0,0.75); color: white;}
+    0% {background-color: transparent; color: transparent; }
 }
 @-moz-keyframes flipper{
-    from {background-color: transparent; color: transparent; }
-    to {background-color: rgba(0,0,0,0.75); color: white; }
+    0% {background-color: transparent; color: transparent; }
+    100% {background-color: rgba(0,0,0,0.75); color: white; }
+    0% {background-color: transparent; color: transparent; }
 }
 @keyframes flipper {
-    from {background-color: transparent; color: transparent; }
-    to {background-color: rgba(0,0,0,0.75); color: white; }
+    0% {background-color: transparent; color: transparent; }
+    100% {background-color: rgba(0,0,0,0.75); color: white; }
+    0% {background-color: transparent; color: transparent; }
 }
 
 @media screen and (min-width: 1000px) {
