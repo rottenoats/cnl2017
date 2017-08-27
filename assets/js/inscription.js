@@ -29,38 +29,39 @@ $(document).ready(function () {
         }
 
         $choice.prop("checked", false);
+        choiceHandler();
 
         if($this.val() !== ""){
             $step1.fadeIn();
+            clubnameHandler();
+            paymentHandler();
+
         }else{
             $step1.fadeOut();
+            $step2.fadeOut();
+            $step3.fadeOut();
+            $step4.fadeOut();
+
+            //TODO: test
+            $register.fadeOut();
+            $register.prop("disabled", true);
+            $registerAndPay.fadeOut();
+            $registerAndPay.prop("disabled", true);
         }
     });
 
-    $clubname.on("input", function (event) {
-        if($(this).val().length > 0){
+    var clubnameHandler = function () {
+        var $this = $clubname;
+        if($this.val().length > 0){
             $step2.fadeIn();
         }else{
             $step2.fadeOut();
             $step3.hide();
+            $step4.hide();
         }
-    });
+    };
 
-    $choice.on("change", function (event) {
-        var $this = $(this);
-        if($this.prop("checked", true)){
-            $step3.fadeIn();
-            if($(this).hasClass("share")){
-                $step4.fadeIn();
-            }else{
-                $step4.fadeOut();
-            }
-        }else{
-            $step3.fadeOut();
-        }
-    });
-
-    $paiement.on("change", function (event) {
+    var paymentHandler = function () {
         var val = $('input[name="paiement"]:checked').val();
         if(val === "cheque"){
             $register.fadeIn();
@@ -69,13 +70,36 @@ $(document).ready(function () {
             $registerAndPay.prop("disabled", true);
         }
 
-        if(val === "lydia"){
+        else if(val === "lydia"){
             $register.hide();
             $register.prop("disabled", true);
             $registerAndPay.fadeIn();
             $registerAndPay.prop("disabled", false);
         }
-    });
+    };
+
+    var choiceHandler = function (event) {
+        var $this = $('input[name="choix"]:checked');
+        if($this.prop("checked") === true){
+            console.log("checked", $this.prop("checked"));
+            $step3.fadeIn();
+            if($this.hasClass("share")){
+                $step4.fadeIn();
+            }else{
+                $step4.fadeOut();
+            }
+        }else{
+            console.log('not checked');
+            $step3.fadeOut();
+            $step4.fadeOut();
+        }
+    };
+
+    $clubname.on("input", clubnameHandler);
+
+    $choice.on("change", choiceHandler);
+
+    $paiement.on("change", paymentHandler);
     
     $form.on("submit", function (event) {
         event.preventDefault();
