@@ -1,0 +1,30 @@
+{
+  "name": "cnl2017",
+  "version": "1.0.0",
+  "description": "Spectral by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rugdealer/cnl2017.git"
+  },
+  "keywords": [
+    "cnl",
+    "2017"
+  ],
+  "author": "Kevin Faulhaber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rugdealer/cnl2017/issues"
+  },
+  "homepage": "https://github.com/rugdealer/cnl2017#readme",
+  "dependencies": {
+    "flatpickr": "^3.0.7",
+    "sweetalert": "^1.1.3"
+  }
+}
