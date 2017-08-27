@@ -16,8 +16,8 @@ $(document).ready(function () {
     var $step3 = $("#step3");
     var $step4 = $("#step4");
 
-    $selectClubType.on("change", function (event) {
-        var $this = $(this);
+    var main = function () {
+        var $this = $selectClubType;
 
         if($selectClubType.val() === "leo"){
             $(".leo").show();
@@ -48,7 +48,9 @@ $(document).ready(function () {
             $registerAndPay.fadeOut();
             $registerAndPay.prop("disabled", true);
         }
-    });
+    }
+
+    $selectClubType.on("change", main);
 
     var clubnameHandler = function () {
         var $this = $clubname;
@@ -89,7 +91,6 @@ $(document).ready(function () {
                 $step4.fadeOut();
             }
         }else{
-            console.log('not checked');
             $step3.fadeOut();
             $step4.fadeOut();
         }
@@ -100,40 +101,73 @@ $(document).ready(function () {
     $choice.on("change", choiceHandler);
 
     $paiement.on("change", paymentHandler);
-    
+
+    var pending = false;
     $form.on("submit", function (event) {
         event.preventDefault();
         event.stopImmediatePropagation();
 
+        if(pending) return;
+        $register.prop("disabled", true);
+        $registerAndPay.prop("disabled", true);
+        pending = true;
+
         var target = "https://script.google.com/macros/s/AKfycbxkV41wETxrKjjnWlOt_3NcMgeCXzNxST0qSxvTtMJuMqRKZUM/exec";
 
-        var data = $.param($(this).serializeArray().map(function (obj) {
+        var foundPremier = false;
+        var raw = $(this).serializeArray().map(function (obj) {
             if(obj.name === "premier_rassemblement"){
                 if($('input[name="premier_rassemblement"]').prop("checked", true)){
                     obj.value = "oui"
                 }else{
                     obj.value = "non"
                 }
+                foundPremier = true;
             }
             return obj;
-        }));
+        });
+
+        if(!foundPremier){
+            raw.push({name: "premier_rassemblement", value: "non"});
+        }
+
+        var data = $.param(raw);
 
         $.post(target, data, function(res){
-
+            pending = false;
             swal({
                 title: "Inscrit !",
                 text: "Vous allez recevoir un mail de confirmation",
                 type: "success",
-                showCancelButton: true,
                 confirmButtonText: "Merci!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            });
+                closeOnConfirm: false
+            }
+            /*function(isConfirm){
+                if (isConfirm) {
+                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                } else {
+                    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                }
+            }*/);
+
+            //TODO: Send them to main page
 
             console.log(res);
+            $form.get(0).reset();
+            main();
 
         }).fail(function (error) {
-            console.error(error);
+            pending = false;
+            swal({
+                title: "Erreur !",
+                text:"Veuillez essayez ulterieurement, ou envoyez un message à cnl2017.strasbourg@gmail.com . Merci.",
+                showCancelButton: true,
+                closeOnCancel: true
+            });
+        }).always(function(){
+            $register.prop("disabled", true);
+            $registerAndPay.prop("disabled", true);
+            main();
         })
 
     });
